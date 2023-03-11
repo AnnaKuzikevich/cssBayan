@@ -1,0 +1,37 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.accordion {
+
+}
+
+.accordion-item {
+
+}
+
+.accordion-item_input {
+
+}
+
+.accordion-item_trigger {
+    padding: 20px;
+
+}
+
+.accordion-item_content {
+    padding: 20px;
+    border-bottom: 1px solid gray;
+}
