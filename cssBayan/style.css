@@ -17,8 +17,8 @@ body {
     font-size: 3em;
 }
 .accordion{
-       color: rgb(71, 132, 159);
-    font-size: 2em;
+    color: rgb(71, 132, 159);
+    font-size: 3em;
 }
 
 .accordion-item {
@@ -62,15 +62,13 @@ body {
 }
 .accordion-item_trigger:hover {
     border-bottom: 0;
-    transition: all 0.5s ease;
 }
 
-.accordion-item_trigger:focus .icon {
+.accordion-item:hover .icon {
     display: block;
     transition: all 0.5s ease;
     transform: rotate(-90deg);
 }
-
 
 .accordion-item_content {
     display: none;
@@ -106,7 +104,24 @@ body {
     display: flex;
     justify-content: center;
     border-bottom: 1px solid gray;
-    border-top: 0;
     transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 880px) {
+    .header{
+        font-size: 2em;
+    }
+    .accordion{
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .header{
+        font-size: 1rem;
+    }
+    .accordion{
+        font-size: 1rem;
+    }
 }
 
