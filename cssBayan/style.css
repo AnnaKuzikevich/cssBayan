@@ -17,8 +17,10 @@ body {
     font-size: 3em;
 }
 .accordion{
+    max-width: 30em;
     color: rgb(71, 132, 159);
     font-size: 3em;
+    transition: all 0.5s ease;
 }
 
 .accordion-item {
@@ -34,12 +36,14 @@ body {
 
 .accordion:hover .icon {
    display: block;
+   transition: all 0.5s ease;
 }
 
 .icon {
     display: none;
     width: 1.5rem;
     height: 1.5rem;
+    transition: all 0.5s ease;
 }
 
 .accordion-item_input {
@@ -55,6 +59,7 @@ body {
     justify-content: space-between;
     padding: 0.2em;
     border-bottom: 0.1em solid rgb(232, 223, 223);
+    transition: all 0.5s ease;
 }
 .accordion-item_trigger:hover .accordion-item_content {
     display: block;
@@ -77,12 +82,12 @@ body {
 }
 
 .card {
-    width: 15em;
-    height: 15em;
+    width: 10em;
+    height: 10em;
 }
 
 .accordion-item_input:checked ~ .accordion-item_trigger {
-    color: rgb(71, 132, 159);
+    color: rgb(0, 0, 0);
     border-bottom: 0;
 }
 
@@ -93,18 +98,26 @@ body {
     border-bottom: 1px solid gray;
     border-top: 0;
 }
+
 .accordion-item_input:hover ~ .accordion-item_content {
     display: flex;
     justify-content: center;
     border-bottom: 1px solid gray;
     border-top: 0;
-    transition: all 0.5s ease;
+    transition: all 0.8s ease;
+    animation: fade ease-in 0.5s;
+}
+@keyframes fade {
+    from { opacity: 0; }
+to { opacity: 1 }
 }
 .accordion-item_content:hover  {
     display: flex;
     justify-content: center;
     border-bottom: 1px solid gray;
-    transition: all 0.5s ease;
+}
+.accordion-item:active {
+   color: rgb(71, 132, 159); ;
 }
 
 @media screen and (max-width: 880px) {
